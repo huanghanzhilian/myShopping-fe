@@ -1,0 +1,22 @@
+{
+  "name": "myShopping-fe",
+  "version": "1.0.0",
+  "description": "myShopping前端代码",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huanghanzhilian/myShopping-fe.git"
+  },
+  "author": "huangjipeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huanghanzhilian/myShopping-fe/issues"
+  },
+  "homepage": "https://github.com/huanghanzhilian/myShopping-fe#readme",
+  "devDependencies": {
+    "webpack": "^1.15.0"
+  }
+}
