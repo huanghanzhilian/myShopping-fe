@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/huanghanzhilian/myShopping-fe#readme",
   "devDependencies": {
-    "webpack": "^1.15.0"
-  }
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.18.2",
+    "webpack": "^1.15.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+  },
+  "dependencies": {}
 }
