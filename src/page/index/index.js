@@ -6,4 +6,5 @@ require('./index.css');
 
 var $$ = require('jquery');
 
-$$("body").html("HELLO")
+$$("body").html("HELLO");
+
