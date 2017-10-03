@@ -1,2 +1,9 @@
 //index.js
-//require('./index.css');
+//require('./cats.js');
+
+require('./index.css');
+
+
+var $$ = require('jquery');
+
+$$("body").html("HELLO")
