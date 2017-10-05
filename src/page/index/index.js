@@ -8,5 +8,5 @@ var $$ = require('jquery');
 
 $$("body").html("HELLO");
 
-console.log("hello")
+//console.log("hello")
 

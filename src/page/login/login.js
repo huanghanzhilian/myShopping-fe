@@ -7,4 +7,5 @@
 //login.js
 require('./login.css');
 require('../module.js');
-alert(1);
+//alert(1);
+console.log("你好")

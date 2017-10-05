@@ -27,16 +27,23 @@ module.exports = {
         "login":"./src/page/login/login.js"
     },//入口文件
     output: {//输出信息
-        path: "./dist",//目录名称   // 输出到那个目录下（__dirname当前项目目录）
+        path: "./dist",//存放路径 目录名称   // 输出到那个目录下（__dirname当前项目目录）
+        publicPath:"/dist",//访问文件时候用的路径
         filename: "js/[name].js"//输出文件   //最终打包生产的文件名
     },
     externals:{//引入外部资源作为项目文件模块化引用
         'jquery':'window.jQuery'
     },
     module: {
-        loaders: [
-            {test: /\.css$/, loader: ExtractTextPlugin.extract("style","css")},
+        loaders: [{
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract("style", "css")
+            },
             //{ test: /\.css$/, loader: "style-loader!css-loader"}
+            {
+                test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader?limit:10,name:resource/[name].[ext]'
+            }
         ]
     },
     //插件
