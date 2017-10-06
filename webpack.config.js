@@ -1,10 +1,10 @@
 var webpack= require('webpack');
-
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-// console.log(ExtractTextPlugin)
 
-
+// 环境变量配置，dev / online
+var WEBPACK_ENV         = process.env.WEBPACK_ENV || 'dev';
+console.log(WEBPACK_ENV)
 /**
  * 获取html-webpack-plugin参数的方法
  */
@@ -18,7 +18,8 @@ var getHtmlConfig=function(name){
     }
 }
 
-module.exports = {
+// webpack config
+var config = {
     // entry是入口文件，可以多个，代表要编译那些js
     //entry:['./src/main.js','./src/login.js','./src/reg.js'],
     entry: {
@@ -46,6 +47,14 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        alias: {
+            util: __dirname + '/src/util',
+            page: __dirname + '/src/page',
+            service: __dirname + '/src/service',
+            image: __dirname + '/src/image',
+        }
+    },
     //插件
     plugins:[
         //独立通用模块到js/base.js
@@ -60,4 +69,9 @@ module.exports = {
         new HtmlWebpackPlugin(getHtmlConfig('index')),
         new HtmlWebpackPlugin(getHtmlConfig('login')),
     ]
-};
+}
+if('dev' === WEBPACK_ENV){
+    config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
+}
+
+module.exports = config;
