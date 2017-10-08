@@ -3,7 +3,7 @@ var conf = {
     serverHost: ''
 };
 var _mm = {
-    //网络请求
+    //网络请求 。
     request: function(param) {
         var _this = this;
         $.ajax({
