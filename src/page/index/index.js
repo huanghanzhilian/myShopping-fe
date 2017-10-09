@@ -22,4 +22,5 @@ var data={
 	data:'test'
 }
 console.log(_mm.renderHtml(html,data));
+console.log("hello")
 
