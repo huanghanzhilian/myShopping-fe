@@ -23,7 +23,7 @@ var config = {
     // entry是入口文件，可以多个，代表要编译那些js
     //entry:['./src/main.js','./src/login.js','./src/reg.js'],
     entry: {
-        "common":"./src/page/common/index.js",
+        "common":["./src/page/common/index.js"],
         "index":"./src/page/index/index.js",
         "login":"./src/page/login/login.js"
     },//入口文件
@@ -71,7 +71,7 @@ var config = {
     ]
 }
 if('dev' === WEBPACK_ENV){
-    //config.entry.common.push('webpack-dev-server/client?http://localhost:8082/');
+    config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
 }
 
 module.exports = config;
