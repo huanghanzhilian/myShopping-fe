@@ -43,7 +43,8 @@ var config = {
             {
                 test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader?limit:10,name:resource/[name].[ext]'
-            }
+            },
+            { test: /\.string$/, loader: 'html-loader'}
         ]
     },
     resolve: {

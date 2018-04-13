@@ -29,7 +29,12 @@ require('page/common/nav-simple/index.js');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
 
+var navSide         = require('page/common/nav-side/index.js');
+
 require('./index.css');
 require('../module.js');
 //alert(1);
 console.log("首页")
+navSide.init({
+            name: 'user-center'
+        });
