@@ -25,6 +25,8 @@ console.log(_mm.renderHtml(html,data));
 console.log("hellokk")
 */
 
+require('page/common/nav-simple/index.js');
+require('page/common/nav/index.js');
 
 require('./index.css');
 require('../module.js');

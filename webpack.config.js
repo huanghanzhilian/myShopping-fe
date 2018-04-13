@@ -4,7 +4,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // 环境变量配置，dev / online
 var WEBPACK_ENV         = process.env.WEBPACK_ENV || 'dev';
-console.log(WEBPACK_ENV)
 /**
  * 获取html-webpack-plugin参数的方法
  */
@@ -49,6 +48,7 @@ var config = {
     },
     resolve: {
         alias: {
+            node_modules    : __dirname + '/node_modules',
             util: __dirname + '/src/util',
             page: __dirname + '/src/page',
             service: __dirname + '/src/service',
