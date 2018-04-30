@@ -2,7 +2,7 @@
 * @Author: huanghanzhilian
 * @Date:   2018-04-29 10:58:14
 * @Last Modified by:   huanghanzhilian
-* @Last Modified time: 2018-04-30 09:39:00
+* @Last Modified time: 2018-04-30 23:05:18
 */
 'use strict';
 
@@ -25,6 +25,16 @@ var _order = {
             data    : orderInfo,
             success : resolve,
             error   : reject
+        });
+    },
+
+    // 获取订单列表
+    getOrderList: function(data, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/order/list.do'),
+            data: data,
+            success: resolve,
+            error: reject
         });
     },
 
