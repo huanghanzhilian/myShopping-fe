@@ -2,7 +2,7 @@
 * @Author: huanghanzhilian
 * @Date:   2018-04-29 10:58:14
 * @Last Modified by:   huanghanzhilian
-* @Last Modified time: 2018-04-30 23:05:18
+* @Last Modified time: 2018-04-30 23:50:08
 */
 'use strict';
 
@@ -33,6 +33,30 @@ var _order = {
         _mm.request({
             url: _mm.getServerUrl('/order/list.do'),
             data: data,
+            success: resolve,
+            error: reject
+        });
+    },
+
+    // 获取订单详情
+    getOrderDetail: function(orderNo, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/order/detail.do'),
+            data: {
+                orderNo: orderNo
+            },
+            success: resolve,
+            error: reject
+        });
+    },
+
+    // 取消订单
+    orderCancal: function(orderNo, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/order/cancel.do'),
+            data: {
+                orderNo: orderNo
+            },
             success: resolve,
             error: reject
         });
