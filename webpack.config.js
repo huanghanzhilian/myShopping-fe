@@ -30,7 +30,8 @@ var config = {
         'cart'              : ['./src/page/cart/index.js'],
         'order-confirm'     : ['./src/page/order-confirm/index.js'],//订单确认页
         'order-list'        : ['./src/page/order-list/index.js'],//订单列表页
-        'order-detail'        : ['./src/page/order-detail/index.js'],//订单详情页
+        'order-detail'      : ['./src/page/order-detail/index.js'],//订单详情页
+        'payment'           : ['./src/page/payment/index.js'],//支付页
         'user-login'        : ['./src/page/user-login/index.js'],
         'user-register'     : ['./src/page/user-register/index.js'],
         'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
@@ -87,6 +88,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '订单确认页')),
         new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情页')),
+        new HtmlWebpackPlugin(getHtmlConfig('payment', '订单支付页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login','登录页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
