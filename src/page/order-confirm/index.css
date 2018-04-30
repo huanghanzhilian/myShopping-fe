@@ -2,14 +2,14 @@
 * @Author: huanghanzhilian
 * @Date:   2018-04-29 10:24:16
 * @Last Modified by:   huanghanzhilian
-* @Last Modified time: 2018-04-29 22:26:03
+* @Last Modified time: 2018-04-30 16:27:25
 */
 
 /*地址部分的样式 s */
 .page-wrap .panel{
 	overflow: hidden;
 }
-.address-item{
+.address-item,.address-add{
 	width:200px;
 	margin:20px 20px 0 0;
 	padding:5px 8px;
@@ -20,7 +20,8 @@
 .address-item.active{
 	border: 3px dashed #c60023
 }
-.address-item:hover{
+.address-item:hover,
+.address-add:hover{
 	background: #fafafa;
 }
 
@@ -48,16 +49,16 @@
 .address-item .address-opera .link{
 	margin-right:5px;
 }
-.address-item  .address-new{
+.address-add  .address-new{
 	padding: 8px 0;
 	text-align:center;
 	color: #ccc;
 }
-.address-item  .address-new .fa{
+.address-add  .address-new .fa{
 	font-size: 50px;
 	line-height:50px;
 }
-.address-item  .address-new .text{
+.address-add  .address-new .text{
 	font-size: 12px;
 
 }
@@ -120,8 +121,86 @@
 }
 /*订单提交 e */
 
+/* 错误信息 */
+.err-tip{
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
+}
 
 
+/*模态框*/
+.modal {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.modal .modal-container {
+    width: 700px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 4px
+}
+
+.modal .modal-container .modal-header {
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid #ccc
+}
+
+.modal .modal-container .modal-header h1 {
+    font-size: 14px
+}
+
+.modal .modal-container .modal-header .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer
+}
+
+.modal .modal-container .modal-body {
+    padding: 15px
+}
+
+.form .form-line {
+    overflow: hidden;
+    margin: 5px 0
+}
+
+.form .form-line .label {
+    cursor: pointer;
+    width: 80px;
+    display: block;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+    height: 30px;
+    line-height: 30px
+}
+
+.form .form-line .form-item {
+    padding: 0 5px;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    margin-right: 10px
+}
+
+.form .form-btn {
+    margin-left: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px
+}
+
+.form .form-require {
+    color: red
+}
 
 
 

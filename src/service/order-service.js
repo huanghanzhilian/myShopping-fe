@@ -2,7 +2,7 @@
 * @Author: huanghanzhilian
 * @Date:   2018-04-29 10:58:14
 * @Last Modified by:   huanghanzhilian
-* @Last Modified time: 2018-04-29 10:59:33
+* @Last Modified time: 2018-04-30 09:39:00
 */
 'use strict';
 
@@ -10,10 +10,19 @@ var _mm = require('util/mm.js');
 
 var _order = {
     // 获取商品列表
-    getProductList : function(listParam, resolve, reject){
+    getProductList : function(resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/product/list.do'),
-            data    : listParam,
+            url     : _mm.getServerUrl('/order/get_order_cart_product.do'),
+            //data    : listParam,
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 提交订单
+    createOrder : function(orderInfo,resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/order/create.do'),
+            data    : orderInfo,
             success : resolve,
             error   : reject
         });
