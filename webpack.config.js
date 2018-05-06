@@ -96,7 +96,23 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
-    ]
+    ],
+    // 代理配置
+    devServer: {
+        // proxy: {
+        //   ['/user','/cart','/product']: {
+        //     target: 'http://happymmall.com',
+        //     changeOrigin: true,
+        //     secure: false
+        //   }
+        // }
+        proxy: [{
+          context: ["/user", "/cart","/product"],
+          target: "http://happymmall.com",
+          changeOrigin: true,
+          secure: false
+        }]
+    }
 }
 if('dev' === WEBPACK_ENV){
     config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
