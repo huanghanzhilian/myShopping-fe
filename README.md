@@ -5,6 +5,7 @@
 jQuery + webpack + style-loader 前后端分离 电商项目
 
 
+
 ## 项目运行
 
 
@@ -38,7 +39,7 @@ npm run dev
 
 >  项目交流群：476190214(QQ)
 
->  此项目总结了一些技术文档，可以去我的博客看看。[地址在这里](http://huanghanlian.com/)
+>  此项目总结了一些技术文档，可以去我的博客看看。[地址在这里](http://blog.huanghanlian.com/)
 
 
 ## 效果演示
